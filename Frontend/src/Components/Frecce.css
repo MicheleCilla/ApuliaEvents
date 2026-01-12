@@ -1,0 +1,39 @@
+.scrollArrowBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: none;
+    background: #d0d0d0;
+    color: #000;
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.15s;
+
+    /* --- MODIFICHE PER IL CENTRAMENTO --- */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Importante: rimuove il padding default dei bottoni */
+    padding-bottom: 4px; /* Aggiustamento ottico: spinge il carattere leggermente in su */
+    line-height: 1; /* Evita che l'interlinea sposti il carattere */
+}
+
+.scrollArrowBtn:hover:not(:disabled) {
+    background: #e7e7e7;
+}
+
+.scrollArrowBtn:active:not(:disabled) {
+    /* Nota: ho corretto il transform per mantenere anche la centratura verticale */
+    transform: translateY(-50%) scale(0.92);
+    background: #c7c7c7;
+}
+
+.scrollArrowBtn:disabled {
+    background: #555 !important;
+    cursor: default !important;
+    opacity: .5;
+}
